@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive images</title>
+    <style>
+      img {
+        width: 400px;
+        height: 400px;
+        box-shadow: 7px 7px 5px orange;
+        margin: 20px;
+      }
+
+      @keyframes zoomin {
+        0% {
+          width: 400px;
+          height: 400px;
+        }
+        25% {
+          width: 350px;
+          height: 350px;
+          transform: rotate(10deg);
+        }
+        75% {
+          width: 350px;
+          height: 350px;
+          transform: rotate(-10deg);
+        }
+        100% {
+          width: 400px;
+          height: 400px;
+        }
+      }
+      img:hover {
+        animation: zoomin 1s cubic-bezier(0.8, 1, 1, 0.8);
+      }
+      .row1 {
+        display: flex;
+        border: 3px solid magenta;
+      }
+      .row2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10vh;
+        border: 3px solid orange;
+      }
+      h1 {
+        margin: auto;
+        text-align: center;
+        color: rgb(85, 23, 0);
+      }
+      #headd {
+        transition: all 1s;
+      }
+      #head:hover {
+        color: chocolate;
+        animation: animate 2s infinite;
+      }
+      @keyframes animate {
+        0% {
+          color: rgb(85, 23, 0);
+        }
+        50% {
+          color: chocolate;
+          font-size: 3rem;
+          transform: translateY(20px);
+          text-decoration: underline;
+        }
+        75% {
+          color: coral;
+          font-size: 3rem;
+          transform: translateY(20px);
+          text-decoration: underline;
+        }
+        100% {
+          color: rgb(85, 23, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CRICKETER IMAGES</h1>
+    <h1 id="head">MUKESH KUMAR 1906008</h1>
+    <div class="row2">
+      <img
+        src="1.jpg"
+        alt="a"
+      />
+      <img
+        src="2.jpg"
+        alt="a"
+      />
+      <img
+        src="3.jpg"
+        alt="a"
+      />
+      <img
+        src="4.jpg"
+        alt="a"
+      />
+      <img
+        src="5.jpg"
+        alt="a"
+      />
+      <img
+        src="6.jpg"
+        alt="a"
+      />
+      <img
+        src="7.jpg"
+        alt="a"
+      />
+      <img
+        src="8.jpg"
+        alt="a"
+      />
+    </div>
+  </body>
+</html>
